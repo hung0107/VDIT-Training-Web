@@ -1,5 +1,7 @@
 *{
     font-family: monospace;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: #c8e0da
@@ -19,13 +21,14 @@ body{
 .left{
     margin-top: 8%;
     margin-left: 5%;
-    text-align: center;
+    /* text-align: center; */
     margin-right: 70%;
 }
 #c1{
     font-size: 50px;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    /* margin: 0;
+    padding: 0; */
 }
 /* #task-input{
     width: 90%;
@@ -42,3 +45,26 @@ body{
     background: none;
     font-size: 18px;
 }
+h3{
+    margin-top: 2%;
+    margin-left: auto;
+    font-size: 24px;
+    text-align: left;
+}
+.task-list{
+    max-width: 90%;
+    margin-top: 2%;
+    margin-left: auto;
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 12px;
+    margin: 5px 0;
+    overflow-wrap: break-word;
+}
+
+.task-list i{
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+}    
