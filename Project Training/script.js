@@ -13,6 +13,8 @@ form.addEventListener('submit', function(event) {
             status: 'completed',
         })
     }
+
+    input.value = '' 
 })
 
 function addTodoElement(todo){
@@ -38,6 +40,15 @@ function addTodoElement(todo){
     if(todo.status == 'completed'){
         li.setAttribute('class', 'completed')
     }
+
+    li.querySelector('.fa-trash-alt').addEventListener('click', function(event) {
+        event.stopPropagation()
+        li.parentNode.removeChild(li)
+    })
+
+    li.querySelector('.fa-check').addEventListener('click', function(event) {
+        
+    })
 
     todos.appendChild(li)
 }
