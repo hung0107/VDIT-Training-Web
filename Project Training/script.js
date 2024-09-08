@@ -12,10 +12,6 @@ form.addEventListener('submit', function(event) {
             text: val,
             status: 'completed',
         })
-        addTodoElement({
-            text: val,
-            // status: 'completed',
-        })
     }
 })
 
@@ -33,9 +29,11 @@ function addTodoElement(todo){
 
     var li = document.createElement('li')
     li.innerHTML = 
-        `<span>${todo.text}</span>
-        <i class="fas fa-trash-alt"></i>
-        <i class="fas fa-check"></i>`
+        `<span class ="task-content">${todo.text}</span>
+        <span class= "icons"> 
+            <i class="fas fa-check"></i>
+            <i class="fas fa-trash-alt"></i>
+        </span>`
 
     if(todo.status == 'completed'){
         li.setAttribute('class', 'completed')

@@ -52,19 +52,45 @@ h3{
     text-align: left;
 }
 .task-list{
-    max-width: 90%;
+    max-width: 95%;
     margin-top: 2%;
     margin-left: auto;
     list-style-type: none;
     padding: 0;
-    background-color: rgba(255, 255, 255, .5);
-    padding: 12px;
+    background-color: transparent;
+    /* padding: 12px; */
+    
     margin: 5px 0;
     overflow-wrap: break-word;
+    
 }
 
-.task-list i{
+/* .task-list i{
     float: right;
     margin-left: 20px;
     cursor: pointer;
-}    
+}     */
+
+.task-list li{
+    height:40px;
+    padding: 2px 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.task-content {
+    margin-left: 10px;
+}
+
+.icons {
+    width: 40px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
