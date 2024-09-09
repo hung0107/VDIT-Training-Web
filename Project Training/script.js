@@ -47,8 +47,19 @@ function addTodoElement(todo){
     })
 
     li.querySelector('.fa-check').addEventListener('click', function(event) {
-        
+        li.classList.toggle('completed')
     })
 
     todos.appendChild(li)
 }
+
+
+// saveTodolist(){
+//     let todoList = document.querySelectorAll('li')
+//     todoList.forEach(function(item){
+//         let text = item.querySelector('span').innerText
+//         let status = item.querySelector('span').getA
+//         // save to local storage
+//     })
+//     localStorage.setItem('todolist', )
+// }
