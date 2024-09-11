@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <a id="about-btn">ABOUT</a>
+        <a id="contact-btn" href="https://www.facebook.com/profile.php?id=100049620603450">CONTACT</a>
+        
+    </section>
+    <section class="content">
+        <div class="left">
+            <div class="text-box">
+                <h1 id="c1">To-do list</h1>
+            </div>
+            <form class="form-box">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <!-- <button id="add-task-btn">Add</button> -->
+            </form>
+            <div class="notcomp">
+                <h3>Not Completed</h3>
+                <ul class="task-list">
+                    <!-- <li>
+                        <span class ="task-content">Test</span>
+                        <span class= "icons">
+                                <i class="fas fa-check"></i>
+                                <i class="fas fa-trash-alt"></i>
+                        </span>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- <div class="completed"> -->
+            <div>
+                <h3>Completed</h3>
+                <ul class="completion">
+                    <!-- <li class="completed">
+                        <span class ="task-content">Test</span>
+                        <span class= "icons">
+                            <i class="fas fa-check"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </span>
+                    </li> -->
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="middle">
+            <img class="ca-noc" width="400" height="350" src="ca-noc.png">
+        </div>
+        <div class ="right">
+            <div id = "time-counter">
+            </div>
+            <audio class="audio" controls autoplay>
+                <source src="sound.ogg" type="audio/ogg">
+                <source src="sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="about">
+                <h1 class="about-header">about</h1>
+                <div class="about-content">Đây là sản phẩm web hỗ trợ công việc học tập hiệu quả hơn với những tính năng hữu ích</div>
+                <!-- <div>Cảm ơn mọi người vì đã ủng hộ chúng tôi</div> -->
+                <div>Developer: Hùng, Tùng, Quang</div>
+                <div>Inspired by:</div>
+                <a href="https://www.imissmylibrary.com/">imissmylibrary.com</a>
+            </div>
+        </div>
+
+
+        
+    </section>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
