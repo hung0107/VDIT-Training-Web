@@ -9,14 +9,15 @@ body{
     background-color: #c8e0da
 }
 .header{
-    margin-left: 85%;
-    margin-top: 0,5%;
+    margin-left: 84%;
+    margin-top: 1%;
     display:inline-flex;
     font-size: x-large;
     color: #FEF9D9;
 }
 #about-btn{
     margin-right: 10%;
+    cursor: pointer;
 }
 #contact-btn{
     color:#FEF9D9;
@@ -182,12 +183,61 @@ h3{
   width: 700px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 43%;
   transform: translate(-50%, -50%);
+  /* background: ; */
 }
 
+
 .about-header{
-  text-align: center;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  /* justify-content: center; */
+}
+
+.about-content{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#main-about{
+  font-size: 24px;
+  margin-left: 330px;
+  /* justify-content: center; */
+}
+
+.inspired{
+  display: inline-flex;
+}
+
+.inspired a{
+  margin-left: 5px;
+  color: #000;
+  text-decoration: underline;
+}
+
+.fa-x{
+  margin-left: 250px;
+  font-size: x-large;
+  color: rgba(100, 100, 100, 0.662);
+  cursor: pointer;
+}
+
+.fa-x:hover{
+  color: #000;
+}
+
+.modal{
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .hide{
@@ -196,6 +246,22 @@ h3{
 
 audio::-webkit-media-controls-panel{
   background-color: rgba(0,0,0,0.5) !important
+}
+
+.right {
+  margin-left: 1300px;
+}
+
+#time-counter {
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #fff;
+  width: 175px;
+  height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
 }
 
 

@@ -148,6 +148,19 @@ function addTodoElement(todo){
     todos.appendChild(li)
 }
 
+var aboutbtn = document.querySelector('#about-btn')
+var about = document.querySelector('.about')
+var xbtn = document.querySelector('.fa-x')
+var modal = document.querySelector('.modal')
+aboutbtn.addEventListener('click',function(event) {
+    about.classList.remove('hide')
+    modal.classList.remove('hide')
+})
+xbtn.addEventListener('click',function(event){
+    about.classList.add('hide')
+    modal.classList.add('hide')
+} )
+
 
 function bubbles() {
     var bub = document.createElement('div')
@@ -218,3 +231,40 @@ for (var i = 0; i < pupils.length; i++) {
 window.addEventListener('mousemove', goGoogly);
 window.addEventListener('touchstart', goGoogly);
 window.addEventListener('touchmove', goGoogly);
+
+// TIME COUNTER 
+var check = true;
+if (check == true) {
+    var startTime = new Date().getTime();
+    check = false;
+}
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+
+    var distance = now - startTime;
+
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (hours < 10) {
+        var hours_display = "0" + hours
+    } else {
+        var hours_display = hours
+    }
+
+    if (mins < 10) {
+        var munites_display = "0" + mins
+    } else {
+        var munites_display = mins
+    }
+    
+    if (seconds < 10) {
+        var seconds_display = "0" + seconds
+    } else {
+        var seconds_display = seconds
+    }
+    document.getElementById("time-counter").innerHTML = hours_display + "h "
+    + munites_display + "m " + seconds_display + "s ";
+  }, 1000);
