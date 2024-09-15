@@ -18,34 +18,36 @@
             <div class="text-box">
                 <h1 id="c1">To-do list</h1>
             </div>
-            <form class="form-box">
-                <input type="text" id="task-input" placeholder="Add a new task">
-                <!-- <button id="add-task-btn">Add</button> -->
-            </form>
-            <div class="notcomp">
-                <h3>Not Completed</h3>
-                <ul class="task-list">
-                    <!-- <li>
-                        <span class ="task-content">Test</span>
-                        <span class= "icons">
+            <div class="container">
+                <form class="form-box">
+                    <input type="text" id="task-input" placeholder="Add a new task">
+                    <!-- <button id="add-task-btn">Add</button> -->
+                </form>
+                <div class="notcomp">
+                    <h3>Not Completed</h3>
+                    <ul class="task-list">
+                        <!-- <li>
+                            <span class ="task-content">Test</span>
+                            <span class= "icons">
+                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
+                <!-- <div class="completed"> -->
+                <div>
+                    <h3>Completed</h3>
+                    <ul class="completion">
+                        <!-- <li class="completed">
+                            <span class ="task-content">Test</span>
+                            <span class= "icons">
                                 <i class="fas fa-check"></i>
                                 <i class="fas fa-trash-alt"></i>
-                        </span>
-                    </li> -->
-                </ul>
-            </div>
-            <!-- <div class="completed"> -->
-            <div>
-                <h3>Completed</h3>
-                <ul class="completion">
-                    <!-- <li class="completed">
-                        <span class ="task-content">Test</span>
-                        <span class= "icons">
-                            <i class="fas fa-check"></i>
-                            <i class="fas fa-trash-alt"></i>
-                        </span>
-                    </li> -->
-                </ul>
+                            </span>
+                        </li> -->
+                    </ul>
+                </div>
             </div>
 
 
@@ -53,11 +55,8 @@
 
         <div class="middle">
             <img class="ca-noc" width="400" height="350" src="ca-noc.png">
-            <audio class="audio" controls autoplay>
-                <source src="sound.ogg" type="audio/ogg">
-                <source src="sound.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <img class="dialog-box" width="300" height="300" src="dialog-box.png">
+
             <div class="modal hide">
                 <div class="about hide">
                     <div class="about-header">
@@ -78,7 +77,17 @@
             </div>
         </div>
         <div class="right">
-            <div id = "time-counter"></div>
+            <div class = "time-counter-area">
+                <i class="fa-solid fa-circle-play "></i>
+                <i class="fa-solid fa-circle-pause hide" id="hide1"></i>
+                <div id = "time-counter"></div>
+            </div>
+            <audio class="audio" controls autoplay></audio>
+                <source src="sound.ogg" type="audio/ogg">
+                <source src="sound.mp3" type="audio/mpeg">
+                <!-- Your browser does not support the audio element. -->
+            </audio>
+            
         </div>
             <!-- <div class="modal hide"></div> -->
 
