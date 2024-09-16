@@ -161,19 +161,6 @@ xbtn.addEventListener('click',function(event){
     modal.classList.add('hide')
 } )
 
-var playbtn = document.querySelector('.fa-circle-play')
-var pausebtn = document.querySelector('.fa-circle-pause')
-playbtn.addEventListener('click',function(){
-    // playbtn.classList.add('hide')
-    // pausebtn.classList.remove('hide')
-    playbtn.setAttribute("id", "hide1")
-    pausebtn.removeAttribute("id", "hide1")
-})
-
-pausebtn.addEventListener('click',function(){
-    pausebtn.setAttribute("id", "hide1")
-    playbtn.removeAttribute("id", "hide1")
-})
 
 function bubbles() {
     var bub = document.createElement('div')
@@ -246,38 +233,57 @@ window.addEventListener('touchstart', goGoogly);
 window.addEventListener('touchmove', goGoogly);
 
 // TIME COUNTER 
-// var check = true;
-// if (check == true) {
-//     var startTime = new Date().getTime();
-//     check = false;
-// }
-// var x = setInterval(function() {
 
-//     var now = new Date().getTime();
+var check = true;
+if (check == true) {
+    var tc_status = "pause";
+    var distance = 0 
+    check = false;
+}
 
-//     var distance = now - startTime;
+var playbtn = document.querySelector('.fa-circle-play')
+var pausebtn = document.querySelector('.fa-circle-pause')
+playbtn.addEventListener('click',function(){
+    // playbtn.classList.add('hide')
+    // pausebtn.classList.remove('hide')
+    playbtn.setAttribute("id", "hide1")
+    pausebtn.removeAttribute("id", "hide1")
+    tc_status = "play";
+})
 
-//     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//     if (hours < 10) {
-//         var hours_display = "0" + hours
-//     } else {
-//         var hours_display = hours
-//     }
-
-//     if (mins < 10) {
-//         var munites_display = "0" + mins
-//     } else {
-//         var munites_display = mins
-//     }
+pausebtn.addEventListener('click',function(){
+    pausebtn.setAttribute("id", "hide1")
+    playbtn.removeAttribute("id", "hide1")
+    tc_status = "pause";
+})
+var x = setInterval(function() {
     
-//     if (seconds < 10) {
-//         var seconds_display = "0" + seconds
-//     } else {
-//         var seconds_display = seconds
-//     }
-//     document.getElementById("time-counter").innerHTML = hours_display + "h "
-//     + munites_display + "m " + seconds_display + "s ";
-//   }, 1000);
+    if (tc_status == "play") {
+        distance = distance + 1000;
+    }
+    console.log(distance)
+
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (hours < 10) {
+        var hours_display = "0" + hours
+    } else {
+        var hours_display = hours
+    }
+
+    if (mins < 10) {
+        var munites_display = "0" + mins
+    } else {
+        var munites_display = mins
+    }
+    
+    if (seconds < 10) {
+        var seconds_display = "0" + seconds
+    } else {
+        var seconds_display = seconds
+    }
+    document.getElementById("time-counter").innerHTML = hours_display + "h "
+    + munites_display + "m " + seconds_display + "s ";
+  }, 1000);
