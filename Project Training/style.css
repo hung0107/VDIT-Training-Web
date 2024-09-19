@@ -1,3 +1,9 @@
+:root {
+  --length: 0;
+  --width: 0ch;
+  --time:0s;
+}
+
 *{
   font-family: sans-serif;
   margin: 0;
@@ -274,7 +280,7 @@ background-color: rgba(0,0,0,0.5) !important
 .right {
   display: flex;
   margin-right: 4%;
-  margin-top: 23%;
+  /* margin-top: 23%; */
   float: right;
   flex-direction: column;
   align-items: center;
@@ -283,7 +289,9 @@ background-color: rgba(0,0,0,0.5) !important
 
 .dialog-box{
   /* float: right; */
+  margin-top: 5%;
   margin-bottom: 15%;
+  margin-right: -50px
 }
 
 .audio{
@@ -292,12 +300,15 @@ background-color: rgba(0,0,0,0.5) !important
   top: 70%; */
   /* transform: translate(-50%, -50%); */
   padding-top: 3%;
+  margin-left: 20%;
 }
 
 
 .time-counter-area{
   display: flex;
   align-items: center;
+  margin-top: 20%;
+  margin-left: 20%;
 }
 
 #time-counter {
@@ -517,8 +528,11 @@ p {
   .header{
     margin-left: 82%;
   }
-  .right{
-    margin-top: 28%;
+  .time-counter-area{
+    margin-left: 40%;
+  }
+  .audio{
+    margin-left: 37%;
   }
   /* .seaweed{
     display: none;
@@ -542,7 +556,7 @@ p {
   .left{
     width:90%;
     float: none;
-    margin-bottom: 210px;
+    margin-bottom: 150px;
   }
   .right{
     margin-top:5px;
@@ -597,4 +611,46 @@ p {
   .inspired a{
     margin-left: 2px;
   }
+  .quotes{
+    display: none;
+  }
+
 }
+
+.quotes {
+  position: relative;
+}
+
+#wrapper {
+  position: absolute;
+  top: 38px;
+  left: 30px;
+  font-size:25px;
+  width: 400px;
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: var(--width);
+  animation: typing var(--time) steps(var(--length)), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 20px;
+  text-align:center;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
