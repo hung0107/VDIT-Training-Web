@@ -261,7 +261,6 @@ var x = setInterval(function() {
     if (tc_status == "play") {
         distance = distance + 1000;
     }
-    console.log(distance)
 
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -286,4 +285,28 @@ var x = setInterval(function() {
     }
     document.getElementById("time-counter").innerHTML = hours_display + "h "
     + munites_display + "m " + seconds_display + "s ";
-  }, 1000);
+}, 1000);
+
+/*QUOTES*/  
+const quotes = ["It is never too late to be what you might have been.", "Ideation without execution is delusion.", "Opportunities don’t happen, you create them.", "It always seems impossible until it's done.", "Do the best you can. No one can do more than that."]
+var quotes_index = 0;
+var length = 0 
+var y = setInterval(function() {
+    if (quotes_index < 4) {
+        quotes_index = quotes_index + 1;
+    } else {
+        quotes_index = 0;
+    }
+    var quote_content = document.getElementById("wrapper");
+    var text = quotes[quotes_index];
+    console.log(text)
+
+    length = text.length;
+    var root = document.documentElement;
+    root.style.setProperty('--length', length);
+    root.style.setProperty('--width', length + "ch");
+    root.style.setProperty('--time', length/10 + "s");
+    quote_content.innerHTML = 
+    `<div id ="wrapper"> <div class ="typing-demo"> ${text}</div> </div>`;
+
+}, 10000);
